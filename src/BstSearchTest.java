@@ -50,5 +50,13 @@ public class BstSearchTest {
         assertFalse(result);
 }
 
+    @Test
+    public void contains_nullTarget_throwsNullPointerException() {
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(5);
+        assertThrows(NullPointerException.class, () -> {
+        BstSearch.contains(root, null);
+    });
+}
+
    
 }
