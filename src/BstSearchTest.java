@@ -38,5 +38,17 @@ public class BstSearchTest {
     boolean result = BstSearch.contains(root, 15);
     assertTrue(result);
    }
+
+   @Test
+    public void contains_targetNotInTree_returnsFalse() {
+        BinaryTreeNode<Integer> three = new BinaryTreeNode<>(3);
+        BinaryTreeNode<Integer> seven = new BinaryTreeNode<>(7);
+        BinaryTreeNode<Integer> fifteen = new BinaryTreeNode<>(15);
+        BinaryTreeNode<Integer> five = new BinaryTreeNode<>(5, three, seven);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(10, five, fifteen);
+        boolean result = BstSearch.contains(root, 6);
+        assertFalse(result);
+}
+
    
 }
