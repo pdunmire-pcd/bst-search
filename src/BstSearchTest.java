@@ -9,4 +9,11 @@ public class BstSearchTest {
     boolean result = BstSearch.contains(root, 5);
     assertFalse(result);
    }
+
+   @Test 
+   public void contains_targetAtRoot_returnsTrue(){
+    BinaryTreeNode<Integer> root = new BinaryTreeNode<>(5);
+    boolean result = BstSearch.contains(root, 5);
+    assertTrue(result);
+   }
 }
